@@ -71,6 +71,27 @@ func (dl *DLinkedList) AddToIndex(loc int, n *Node) {
 	}
 }
 
+// func to delete element in the first place
+func (dl *DLinkedList) DeleteFromStart() {
+	if dl.head == nil {
+		fmt.Println("Under Flow")
+		return
+	}
+	if dl.head.next == nil {
+		dl.head = nil
+		fmt.Println("Deleted")
+		return
+	}
+
+	temp := dl.head
+	dl.head = temp.next
+	dl.head.prev = nil
+	// fmt.Println(dl.head)
+	temp = nil
+	fmt.Println("Deleted")
+
+}
+
 // dunc to display  data
 // O(n)
 func (dl DLinkedList) Display() {
@@ -108,6 +129,7 @@ func main() {
 	fmt.Println("Add to last")
 	node9 := &Node{data: 31}
 	myList.AddToIndex(6, node9)
+	myList.DeleteFromStart()
 	myList.Display()
 
 }
