@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 // declare a struct....
 // it has a field fo type slice of int
 type Stack struct {
@@ -23,15 +21,4 @@ func (st *Stack) Pop() int {
 	toRemove := st.items[l]
 	st.items = st.items[:l]
 	return toRemove
-}
-
-func main() {
-	// create a new struct variable
-	myStack := Stack{}
-	myStack.Push(2)
-	myStack.Push(4)
-	myStack.Push(6)
-	fmt.Println(myStack)
-	myStack.Pop()
-	fmt.Println(myStack)
 }
