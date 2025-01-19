@@ -7,7 +7,7 @@
 // at the end we will subtract the formula sum fom the cal sum
 function MissingNumber(array) {
   let formula_sum = 0;
-  cal_sum = 0;
+  let cal_sum = 0;
   len = array.length;
   formula_sum = (len * (len + 1)) / 2;
 
