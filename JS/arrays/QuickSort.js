@@ -17,14 +17,17 @@ function QuickSort(arr) {
     let no = arr[i];
     //if the nno is less then pivot push to left array
     if (no < pivot) left.push(no);
-    //if the nno is greter then pivot push to left array
+    //if the nno is greter then pivot push to right array
     if (no > pivot) right.push(no);
+    // if there are duplicate values in the array then we use the equal
+    // if(no>pivot) equal.push(no)
   }
 
   return [...QuickSort(left), pivot, ...QuickSort(right)];
+  //   return [...QuickSort(left), ...equal, ...QuickSort(right)];
 }
 
-const sortedArray = QuickSort(array);
+const sortedArray = QuickSort([8, 3, 1, 7, 0, 10, 2, 2]);
 
-console.log("Unsorted Array:", array);
+console.log("Unsorted Array:", [8, 3, 1, 7, 0, 10, 2, 2]);
 console.log("Sorted Array:", sortedArray);
