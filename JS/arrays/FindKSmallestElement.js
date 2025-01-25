@@ -38,4 +38,7 @@ function _KthSmallestElement(array, k) {
   if (k <= left.length + equal.lengt) return pivot;
   return _KthSmallestElement(right, k - left.length - equal.length);
 }
+
+// solution using the hashmap||obj
+
 console.log(_KthSmallestElement([33, 22, 33, 1, 51, 62, 41, 66], 4));

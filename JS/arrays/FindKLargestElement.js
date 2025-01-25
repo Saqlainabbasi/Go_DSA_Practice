@@ -26,4 +26,4 @@ function KthLargestElement(array, k) {
     }
   }
 }
-console.log(KthLargestElement([33, 22, 33, 11, 22, 43, 55, 51, 63], 4));
+console.log(KthLargestElement([33, 22, 33, 11, 22, 43, 55, 43, 63], 4));
